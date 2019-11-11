@@ -1,0 +1,94 @@
+Analysis of the probability for each game:
+
+1. "Asso" Game:
+
+The probability of drawing an ace is: 4/52 = 0.07692307692
+
+Explanation:
+
+In the deck there are 4 aces. The total numbers of cards are 52. So we
+have to divide our favorable case: drawing one of the aces (4) and divide it
+by the numbers of cards 52.
+
+Simulation:
+
+After 1.000.000 (one million) trials we have:
+Number of trials: 1000000
+Number of wins: 76528
+Number of losses: 923472
+Estimated probability of winning: 0.076528
+Estimated balance of the player: -234720
+
+So the casino is winning with this game: 234720 euros after one million
+plays.
+
+2. "Grande" Game:
+
+The probability of this
+
+3. "Cuori" Game:
+
+The probability of drawing one "Hearts" out of three cards is: 13/52= 0.25
+
+Explanation:
+
+In the deck there are 13 hearts cards. The total numbers of cards are 52. So we
+have to divide our favorable case: drawing a heart card (13) and
+divide it by the numbers of cards 52.
+
+Simulation:
+
+4. "Completare" Game:
+
+The probability of drawing four cards of different suits is:
+(52/52)*(39/51)*(26/50)*(13/49) = 685464/6497400 = 0.105498
+
+Explanation:
+
+In the deck there are 52 cards. Each card corresponds to one suit.
+So at first draw the probability is 1. Second draw 39/51. We have
+"eliminated" the card from the suit that we extracted the first
+draw favorable cases(52-13) and the card that we have drawn from the total cases
+(52-1).  Third draw: favorable: 39-13 = 26 and total: 51-1 = 50.
+Fourth draw: favorable: 26-13 = 13 and total: 50-1 = 49.
+So we are multiplying the probabilities above and we obtain = 0.105498
+
+Simulation:
+
+After 1.000.000 (one million) trials we have:
+Number of wins: 105481
+Number of losses: 894519
+Estimated probability of winning: 0.105481
+Estimated balance of the player: 1109620
+
+So the casino is winning with this game: -1109620 euros after one million
+plays.
+
+5. "George's Game":
+
+!!! In this game, if you win you are receiving 240.000 euros !!!
+
+The probability of drawing 4 aces is:
+(4/52)*(3/51)*(2/50)*(1/49) = 0.000003693...
+
+Explanation:
+
+In the deck there are 52 card. There are 4 aces. So at first draw the probability is 4/52.
+Second draw 3/51. We have
+"eliminated" the ace from the suit that we extracted the first
+draw favorable cases(4-1) and the card that we have drawn from the total cases
+(52-1).  Third draw: favorable: 3-1 = 2 and total: 51-1 = 50.
+Fourth draw: favorable: 2-1 = 1 and total: 50-1 = 49.
+So we are multiplying the probabilities above and we obtain = 0.000003693...
+
+Simulation:
+
+After 1.000.000 (one million) trials we have:
+Number of trials: 1000000
+Number of wins: 4
+Number of losses: 999996
+Estimated probability of winning: 0.000004
+Estimated balance of the player: -40000
+
+So the casino is winning with this game: -1109620 euros after one million
+plays.

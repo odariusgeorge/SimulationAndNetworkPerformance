@@ -5,7 +5,7 @@
 #include <set>
 #define DEBUG 1
 #define MAX_INT 2147483647
-#define NUMGAMES 100
+#define NUMGAMES 1000000
 using namespace std;
 string suit[] = {"Diamonds", "Hearts", "Spades", "Clubs"};
 string facevalue[] = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
