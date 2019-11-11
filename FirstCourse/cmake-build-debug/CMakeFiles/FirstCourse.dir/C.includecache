@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/george/Projects/SimulationPerformance/FirstCourse/main.c
+stdio.h
+-
+math.h
+-
+stdlib.h
+-
+time.h
+-
+
