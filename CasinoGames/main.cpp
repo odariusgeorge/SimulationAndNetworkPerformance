@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <set>
+#include <cmath>
+#include <iomanip>
 #define DEBUG 1
 #define MAX_INT 2147483647
 #define NUMGAMES 1000000
@@ -312,7 +314,7 @@ void case5() {
 #endif
     }
     printf("\n");
-    printf("Completare Game\n");
+    printf("George's Game\n");
     printf("Number of trials: %d\n", NUMGAMES);
     printf("Number of wins: %d\n", wins);
     printf("Number of losses: %d\n", losses);
@@ -323,7 +325,7 @@ int main()
 {
     int userchoice=1;
     while(userchoice >= 1 && userchoice < 6) {
-        srandom(time(NULL));
+        srandom(1234567);
         gameModes();
         cin >> userchoice;
         switch (userchoice) {

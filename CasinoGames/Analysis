@@ -10,21 +10,56 @@ In the deck there are 4 aces. The total numbers of cards are 52. So we
 have to divide our favorable case: drawing one of the aces (4) and divide it
 by the numbers of cards 52.
 
+P = 4/52 = 0.07692307692
+
 Simulation:
 
 After 1.000.000 (one million) trials we have:
-Number of trials: 1000000
-Number of wins: 76528
-Number of losses: 923472
-Estimated probability of winning: 0.076528
-Estimated balance of the player: -234720
-
-So the casino is winning with this game: 234720 euros after one million
+Number of wins: 76918
+Number of losses: 923082
+Estimated probability of winning: 0.076918
+Estimated balance: -230820
+So the casino is winning with this game: 230820 euros after one million
 plays.
 
 2. "Grande" Game:
 
-The probability of this
+The probability of this is a little bit tricky.
+If your card is an ace then the probability is 0. (Assuming ace is 13)
+If your card is a "K" then the probability is 4/51. (Just the aces are favorable
+and there are 51 options because you already have a card)
+If your card is a "Q" then the probability is 8/51 (Aces and Kings favorable
+51 options because you already have a card)
+...
+...
+...
+If your card is a "2" then the probability is 48/51 (all the cards excluding the
+others three 2s and 51 because you already have drawn a card from the deck)/
+
+So the probability will be
+P = ((0+4+8...+48)/51)/13 = 0.47058...
+
+A piece of code that calculate the probability:
+
+int first;
+long double multiplier = 0;
+long double steps = 0 ;
+for(first = 0 ; first <= 48; first+=4) {
+    multiplier += first;
+    steps++;
+}
+std::cout<<float(multiplier/51)/steps;
+
+Simulation:
+
+After 1.000.000 (one million) trials we have:
+Number of trials: 1000000
+Number of wins: 470715
+Number of losses: 529285
+Estimated probability of winning: 0.470715
+Estimated balance: -58570
+So the casino is winning with this game: 58570 euros after one million
+plays.
 
 3. "Cuori" Game:
 
@@ -32,11 +67,25 @@ The probability of drawing one "Hearts" out of three cards is: 13/52= 0.25
 
 Explanation:
 
-In the deck there are 13 hearts cards. The total numbers of cards are 52. So we
-have to divide our favorable case: drawing a heart card (13) and
-divide it by the numbers of cards 52.
+In the deck there are 13 hearts cards. The total numbers of cards are 52. So the
+complement of at least one heats is less than one heart.
+1H = one heart
+0H = no heart
+P(<1H) = P(0H) = (39/52)*(38/51)*(37/50) = 0.41...
+Then :
+P(>=1H) = 1 - P(< 1H) = 1 - 0.41... = 0.58...
 
 Simulation:
+
+After 1.000.000 (one million) trials we have:
+Number of trials: 1000000
+Number of wins: 586636
+Number of losses: 413364
+Estimated probability of winning: 0.586636
+Estimated balance: -249895
+So the casino is winning with this game: 249895 euros after one million
+plays.
+
 
 4. "Completare" Game:
 
@@ -53,15 +102,18 @@ draw favorable cases(52-13) and the card that we have drawn from the total cases
 Fourth draw: favorable: 26-13 = 13 and total: 50-1 = 49.
 So we are multiplying the probabilities above and we obtain = 0.105498
 
+P = 1*(39/51)*(26/50)*(13/49) = 0.105498
+
 Simulation:
 
 After 1.000.000 (one million) trials we have:
-Number of wins: 105481
-Number of losses: 894519
-Estimated probability of winning: 0.105481
-Estimated balance of the player: 1109620
+Number of trials: 1000000
+Number of wins: 104789
+Number of losses: 895211
+Estimated probability of winning: 0.104789
+Estimated balance: 1095780
 
-So the casino is winning with this game: -1109620 euros after one million
+So the casino is winning with this game: -1095780 euros after one million
 plays.
 
 5. "George's Game":
@@ -85,10 +137,10 @@ Simulation:
 
 After 1.000.000 (one million) trials we have:
 Number of trials: 1000000
-Number of wins: 4
-Number of losses: 999996
-Estimated probability of winning: 0.000004
-Estimated balance of the player: -40000
+Number of wins: 3
+Number of losses: 999997
+Estimated probability of winning: 0.000003
+Estimated balance: -280000
 
-So the casino is winning with this game: 40000 euros after one million
+So the casino is winning with this game: 280000 euros after one million
 plays.
