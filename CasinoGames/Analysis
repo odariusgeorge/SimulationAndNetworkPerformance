@@ -144,3 +144,156 @@ Estimated balance: -280000
 
 So the casino is winning with this game: 280000 euros after one million
 plays.
+
+6. "Asso" Game Infinite Deck:
+
+The probability of drawing an ace is: 4/52 = 0.07692307692
+
+Explanation:
+
+In the deck there are 4 aces. The total numbers of cards are 52. So we
+have to divide our favorable case: drawing one of the aces (4) and divide it
+by the numbers of cards 52.
+
+P = 4/52 = 0.07692307692
+
+Simulation:
+
+After 1.000.000 (one million) trials we have:
+Number of wins: 76918
+Number of losses: 923082
+Estimated probability of winning: 0.076918
+Estimated balance: -230820
+So the casino is winning with this game: 230820 euros after one million
+plays.
+
+REMAINS THE SAME!
+
+7. "Grande" Game Infinite Deck:
+
+The probability of this is a little bit tricky.
+If your card is an ace then the probability is 0. (Assuming ace is 13)
+If your card is a "K" then the probability is 4/52. (Just the aces are favorable
+and there are 52 options because infinite deck)
+If your card is a "Q" then the probability is 8/52 (Aces and Kings favorable
+51 options because you already have a card)
+...
+...
+...
+If your card is a "2" then the probability is 48/52 (all the cards excluding the
+others three 2s and 51 because you already have drawn a card from the deck)/
+
+So the probability will be
+P = ((0+4+8...+48)/52)/13 = 0.46153...
+
+A piece of code that calculate the probability:
+
+int first;
+long double multiplier = 0;
+long double steps = 0 ;
+for(first = 0 ; first <= 48; first+=4) {
+    multiplier += first;
+    steps++;
+}
+std::cout<<float(multiplier/52)/steps;
+
+Simulation:
+
+After 1.000.000 (one million) trials we have:
+Number of trials: 1000000
+Number of wins: 462512
+Number of losses: 537488
+Estimated probability of winning: 0.462512
+Estimated balance: -74976
+So the casino is winning with this game: 74976 euros after one million
+plays.
+
+Casino is winning more!!
+
+
+8. "Cuori" Game Infinite Deck:
+
+The probability of drawing one "Hearts" out of three cards is: 13/52= 0.25
+
+Explanation:
+
+In the deck there are 13 hearts cards. The total numbers of cards are 52. So the
+complement of at least one heats is less than one heart.
+1H = one heart
+0H = no heart
+P(<1H) = P(0H) = (39/52)*(39/51)*(39/52) = 0.421...
+Then :
+P(>=1H) = 1 - P(< 1H) = 1 - 0.41... = 0.579...
+
+Simulation:
+
+After 1.000.000 (one million) trials we have:
+Number of trials: 1000000
+Number of wins: 578299
+Number of losses: 421701
+Estimated probability of winning: 0.578299
+Estimated balance: -250226
+So the casino is winning with this game: 250226 euros after one million
+plays.
+
+Casino is winning more!!!
+
+9. "Completare" Game Infinite Deck:
+
+The probability of drawing four cards of different suits is:
+(52/52)*(39/52)*(26/52)*(13/52) = 0.09375
+
+Explanation:
+
+In the deck there are 52 cards. Each card corresponds to one suit.
+So at first draw the probability is 1. Second draw 39/52. We have
+"eliminated" the card from the suit that we extracted the first
+draw favorable cases(52-13).
+Third draw: favorable: 39-13 = 26
+Fourth draw: favorable: 26-13 = 13
+So we are multiplying the probabilities above and we obtain = 0.09375
+
+P = 1*(39/52)*(26/52)*(13/52) = 0.09375
+
+Simulation:
+
+After 1.000.000 (one million) trials we have:
+Number of wins: 93323
+Number of losses: 906677
+Estimated probability of winning: 0.093323
+Estimated balance: 866460
+
+So the casino is winning with this game: -866460 euros after one million
+plays.
+
+
+Casino is "winning" more!!!
+
+10. "George's Game" Infinite Deck:
+
+!!! In this game, if you win you are receiving 240.000 euros !!!
+
+The probability of drawing 4 aces is:
+(4/52)*(4/52)*(4/52)*(4/52) = 0.0000351
+
+Explanation:
+
+In the deck there are 52 card. There are 4 aces. So at first draw the probability is 4/52.
+Second draw 4/52.
+Third draw: 4/52
+Fourth draw: 4/52
+So we are multiplying the probabilities above and we obtain = 0.0000351
+
+Simulation:
+
+After 1.000.000 (one million) trials we have:
+Number of trials: 1000000
+Number of wins: 40
+Number of losses: 999960
+Estimated probability of winning: 0.000040
+Estimated balance: 8600000
+
+So the casino is winning with this game: -8600000 euros after one million
+plays.
+
+Casino is losing more!!!

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/george/Projects/SimulationPerformance/CasinoGames/main.cpp
+/Users/george/Projects/Personal/SimulationPerformance/CasinoGames/main.cpp
 iostream
 -
 stdio.h
@@ -20,5 +20,11 @@ set
 cmath
 -
 iomanip
+-
+vector
+-
+iterator
+-
+algorithm
 -
 
