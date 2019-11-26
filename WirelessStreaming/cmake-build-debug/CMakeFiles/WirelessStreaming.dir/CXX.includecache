@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/george/Projects/Personal/SimulationPerformance/WirelessStreaming/main.cpp
+stdio.h
+-
+iostream
+-
+fstream
+-
+map
+-
+queue
+-
+string
+-
+string
+-
+iterator
+-
+algorithm
+-
+
