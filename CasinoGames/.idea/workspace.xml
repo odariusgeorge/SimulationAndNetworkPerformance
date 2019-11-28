@@ -11,7 +11,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa52ef09-72c2-4b81-849b-65e38b36f9a3" name="Default Changelist" comment="" />
+    <list default="true" id="aa52ef09-72c2-4b81-849b-65e38b36f9a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ThirdTry/.idea/ThirdTry.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WirelessStreamingSecondTry/cmake-build-debug/CMakeFiles/WirelessStreamingSecondTry.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../WirelessStreamingSecondTry/cmake-build-debug/CMakeFiles/WirelessStreamingSecondTry.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WirelessStreamingSecondTry/cmake-build-debug/CMakeFiles/WirelessStreamingSecondTry.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../WirelessStreamingSecondTry/cmake-build-debug/CMakeFiles/WirelessStreamingSecondTry.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WirelessStreamingSecondTry/cmake-build-debug/WirelessStreamingSecondTry" beforeDir="false" afterPath="$PROJECT_DIR$/../WirelessStreamingSecondTry/cmake-build-debug/WirelessStreamingSecondTry" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WirelessStreamingSecondTry/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../WirelessStreamingSecondTry/main.cpp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +36,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -72,6 +80,8 @@
       <workItem from="1573948148904" duration="595000" />
       <workItem from="1573980365776" duration="1987000" />
       <workItem from="1574514948825" duration="70000" />
+      <workItem from="1574952999484" duration="612000" />
+      <workItem from="1574978356410" duration="3000" />
     </task>
     <servers />
   </component>

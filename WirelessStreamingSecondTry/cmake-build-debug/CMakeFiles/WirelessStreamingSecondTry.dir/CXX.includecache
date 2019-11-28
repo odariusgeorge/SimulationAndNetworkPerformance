@@ -7,14 +7,16 @@
 #IncludeRegexTransform: 
 
 /Users/george/Projects/Personal/SimulationPerformance/WirelessStreamingSecondTry/main.cpp
-iostream
--
 stdio.h
 -
 vector
 -
-algorithm
--
 iterator
+-
+iostream
+-
+iomanip
+-
+fstream
 -
 
