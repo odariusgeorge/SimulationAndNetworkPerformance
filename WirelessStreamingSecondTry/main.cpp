@@ -174,6 +174,8 @@ void case11MbpsBuffer50() {
             continue;
         } else {
             arrival = come;
+            if(!packages.empty()) { delay = packages.back() - arrival; }
+            sum.delay += delay;
             service = GetService(fp);
             service /= 1375000;
             packages.push_back( !packages.empty() ?
@@ -182,13 +184,14 @@ void case11MbpsBuffer50() {
         }
     }
     jobs_done+=packages.size();
-    std::cout << std::setprecision(2) << std::fixed;
+    std::cout << std::setprecision(4) << std::fixed;
     cout<<"\nFor "<<index<<" packets:"<<"\n";
     cout<<"Buffer size: 50 packets"<<"\n";
     cout<<"Wireless speed: 11000000 bps"<<"\n";
     cout<<"Packets lost = "<<jobs_lost<<"\n";
     cout<<"Packets done = "<<jobs_done<<"\n";
     cout<<"Lost traffic = "<<jobs_lost*100.00/index<<"%\n";
+    cout<<"Average delay = "<<double(sum.delay/(double)jobs_done)<<" s\n";
     cout<< "\n";
 }
 void case30MbpsBuffer50() {
@@ -216,6 +219,8 @@ void case30MbpsBuffer50() {
             continue;
         } else {
             arrival = come;
+            if(!packages.empty()) { delay = packages.back() - arrival; }
+            sum.delay += delay;
             service = GetService(fp);
             service /= 3750000;
             packages.push_back( !packages.empty() ?
@@ -224,13 +229,14 @@ void case30MbpsBuffer50() {
         }
     }
     jobs_done+=packages.size();
-    std::cout << std::setprecision(2) << std::fixed;
+    std::cout << std::setprecision(4) << std::fixed;
     cout<<"\nFor "<<index<<" packets:"<<"\n";
     cout<<"Buffer size: 50 packets"<<"\n";
     cout<<"Wireless speed: 30000000 bps"<<"\n";
     cout<<"Packets lost = "<<jobs_lost<<"\n";
     cout<<"Packets done = "<<jobs_done<<"\n";
     cout<<"Lost traffic = "<<jobs_lost*100.00/index<<"%\n";
+    cout<<"Average delay = "<<double(sum.delay/(double)jobs_done)<<" s\n";
     cout<< "\n";
 }
 void case54MbpsBuffer50() {
@@ -248,6 +254,8 @@ void case54MbpsBuffer50() {
         if (packages.size() >= 50 )
         { jobs_lost ++; GetService(fp); continue; } else {
             arrival = come;
+            if(!packages.empty()) { delay = packages.back() - arrival; }
+            sum.delay += delay;
             service = GetService(fp);
             service /= 6750000;
             packages.push_back(!packages.empty() ?
@@ -256,13 +264,14 @@ void case54MbpsBuffer50() {
         }
     }
     jobs_done+=packages.size();
-    std::cout << std::setprecision(2) << std::fixed;
+    std::cout << std::setprecision(4) << std::fixed;
     cout<<"\nFor "<<index<<" packets:"<<"\n";
     cout<<"Buffer size: 50 packets"<<"\n";
     cout<<"Wireless speed: 54000000 bps"<<"\n";
     cout<<"Packets lost = "<<jobs_lost<<"\n";
     cout<<"Packets done = "<<jobs_done<<"\n";
     cout<<"Lost traffic = "<<jobs_lost*100.00/index<<"%\n";
+    cout<<"Average delay = "<<double(sum.delay/(double)jobs_done)<<" s\n";
     cout<< "\n";
 }
 int main() {
