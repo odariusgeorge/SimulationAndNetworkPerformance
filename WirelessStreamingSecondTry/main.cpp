@@ -107,11 +107,11 @@ void case6MbpsBuffer50() {
     printf("   average service time .... = %8.6f\n", sum.service / (jobs_done));
     printf("   average delay ........... = %8.6f\n", sum.delay / (jobs_done));
     printf("   average wait ............ = %8.6f\n", sum.wait / (jobs_done));
-    printf("   packages lost ........... = %8.6lu\n", jobs_lost);
-    printf("   packages done ........... = %8.6lu\n", jobs_done);
+    printf("   packages lost ........... = %8.6d\n", jobs_lost);
+    printf("   packages done ........... = %8.6d\n", jobs_done);
 }
 void case6MbpsChangeBuffer() {
-    vector<pair<int,int>> values;
+    vector<pair<int,int> > values;
     pair<int,int> value;
     for (int i=0;i<=300;i+=10) {
         value.first = i;
@@ -141,11 +141,11 @@ void case6MbpsChangeBuffer() {
         values.push_back(value);
     }
     ofstream g("/Users/george/Projects/Personal/SimulationPerformance/WirelessStreamingSecondTry/soccer.txt");
-    for(auto it:values) {
+    for(pair<int,int> it:values) {
         g<<it.first<<" "<<it.second<<"\n";
     }
     cout<<"Computation may take some time..."<<"\n";
-    for (auto it:values) {
+    for (pair<int,int> it:values) {
         cout<<"Buffer size: "<<it.first<<" "<<"Packets done: "<<it.second<<"\n";
     }
 }
