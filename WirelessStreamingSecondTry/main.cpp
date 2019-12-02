@@ -112,9 +112,12 @@ void case6MbpsBuffer50() {
 }
 void case6MbpsChangeBuffer() {
     vector<pair<int,int> > values;
+    vector<pair<int,double > > lost;
     pair<int,int> value;
+    pair<int,double > lost_value;
     for (int i=0;i<=300;i+=10) {
         value.first = i;
+        lost_value.first = i;
         resetStats();
         FILE   *fp;
         fp = fopen(FILENAME, "r");
@@ -138,9 +141,15 @@ void case6MbpsChangeBuffer() {
         }
         jobs_done+=packages.size();
         value.second = jobs_done;
+        lost_value.second = double((double)jobs_lost*100.00/double(index));
         values.push_back(value);
+        lost.push_back(lost_value);
     }
+    ofstream h("/Users/george/Projects/Personal/SimulationPerformance/WirelessStreamingSecondTry/packetloss.out");
     ofstream g("/Users/george/Projects/Personal/SimulationPerformance/WirelessStreamingSecondTry/soccer.txt");
+    for(pair<int, double> it:lost) {
+        h<<it.first<<" "<<double(it.second)<<"\n";
+    }
     for(pair<int,int> it:values) {
         g<<it.first<<" "<<it.second<<"\n";
     }
