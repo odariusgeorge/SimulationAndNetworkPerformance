@@ -1,3 +1,26 @@
+Getting Started
+
+You will need to download the project from moodle platform or via github.
+
+Prerequisites
+
+You will need to have: compiler-drivers of the GNU Compiler Collection like g++ or gcc.
+
+Installing
+
+Go to the directory of the project.
+
+Make an executable of the project with the following command: g++ std=c++11 -o executable main.cpp
+
+Now run the executable: ./executable
+
+Now there's an "infinite" loop and you can run the program as many as you like. You can exit the loop by typing every key excluding [1,2,3,4].
+
+If you type 1 : you will see the analyze of: Internet Speed 6Mbps and Variable Buffer Size
+If you type 2 : you will see the analyze of: Internet Speed 11Mbps and 50 Buffer Size
+If you type 3 : you will see the analyze of: Internet Speed 30Mbps and 50 Buffer Size
+If you type 4 : you will see the analyze of: Internet Speed 54Mbps and 50 Buffer Size
+
 Analysis of every configuration:
 
 1. Internet speed 6Mbps, Buffer size from 0->300 Mbps
@@ -79,3 +102,8 @@ The lost traffic is around 2% and the average delay is 0.0.146s .
 Of course, if we take a look at internet speed 54 mbps, and buffer size of 50 we can
 definitely say that is the best setup, but considering that the price is bigger, I think
 we can stick with the 11Mbps speed.
+
+
+Running environment
+
+The simulation was run on my personal laptop. MacOS Operating System.
