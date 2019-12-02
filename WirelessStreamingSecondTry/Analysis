@@ -1,0 +1,81 @@
+Analysis of every configuration:
+
+1. Internet speed 6Mbps, Buffer size from 0->300 Mbps
+
+
+Buffer size: 0 Packets done: 0
+Buffer size: 10 Packets done: 375196
+Buffer size: 20 Packets done: 532018
+Buffer size: 30 Packets done: 580169
+Buffer size: 40 Packets done: 599088
+Buffer size: 50 Packets done: 607387
+Buffer size: 60 Packets done: 610984
+Buffer size: 70 Packets done: 613008
+Buffer size: 80 Packets done: 614518
+Buffer size: 90 Packets done: 615796
+Buffer size: 100 Packets done: 616956
+Buffer size: 110 Packets done: 618025
+Buffer size: 120 Packets done: 619038
+Buffer size: 130 Packets done: 620012
+Buffer size: 140 Packets done: 620978
+Buffer size: 150 Packets done: 621901
+Buffer size: 160 Packets done: 622810
+Buffer size: 170 Packets done: 623708
+Buffer size: 180 Packets done: 624615
+Buffer size: 190 Packets done: 625440
+Buffer size: 200 Packets done: 626254
+Buffer size: 210 Packets done: 626997
+Buffer size: 220 Packets done: 627696
+Buffer size: 230 Packets done: 628383
+Buffer size: 240 Packets done: 629072
+Buffer size: 250 Packets done: 629725
+Buffer size: 260 Packets done: 630343
+Buffer size: 270 Packets done: 630962
+Buffer size: 280 Packets done: 631550
+Buffer size: 290 Packets done: 632138
+Buffer size: 300 Packets done: 632714
+
+
+I have also attached a graphic with this information.
+From my point of view, if you choose a buffer size of 50 in this case everything will work
+just fine because the packets loss will be around 13%.
+
+
+2. Internet speed 11Mbps, Buffer Size 50
+
+
+Buffer size: 50 packets
+Wireless speed: 11000000 bps
+Packets lost = 19665
+Packets done = 669844
+Lost traffic = 2.8520%
+Average delay = 0.0146 s
+
+
+3. Internet speed 30Mbps, Buffer Size 50
+
+For 689509 packets:
+Buffer size: 50 packets
+Wireless speed: 30000000 bps
+Packets lost = 3336
+Packets done = 686173
+Lost traffic = 0.4838%
+Average delay = 0.0039 s
+
+4. Internet speed 54Mbps, Buffer size 50
+
+For 689509 packets:
+Buffer size: 50 packets
+Wireless speed: 54000000 bps
+Packets lost = 185
+Packets done = 689324
+Lost traffic = 0.0268%
+Average delay = 0.0017 s
+
+
+Taking in consideration the average delay and the lost traffic, from my point of view,
+the best "setup" would be an internet speed of 11Mbps and a buffer size of 50.
+The lost traffic is around 2% and the average delay is 0.0.146s .
+Of course, if we take a look at internet speed 54 mbps, and buffer size of 50 we can
+definitely say that is the best setup, but considering that the price is bigger, I think
+we can stick with the 11Mbps speed.
