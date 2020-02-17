@@ -150,7 +150,7 @@ void case6MbpsChangeBuffer() {
     for(pair<int, double> it:lost) {
         h<<it.first<<" "<<double(it.second)<<"\n";
     }
-    for(pair<int,int> it:values) {
+    for(auto it:values) {
         g<<it.first<<" "<<it.second<<"\n";
     }
     cout<<"Computation may take some time..."<<"\n";
